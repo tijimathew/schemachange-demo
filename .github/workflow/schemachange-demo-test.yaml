@@ -1,5 +1,10 @@
 name: Schemachange Demo Test
 
+on:
+  push:
+    branches:
+      - main
+
 workflow-dispatch:
 
 jobs:
@@ -12,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       run: echo schemachange-demo001
-      
+
   schemachange-teardown:
     runs-on: ubuntu-latest
     steps:
