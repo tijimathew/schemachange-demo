@@ -1,6 +1,6 @@
 name: Schemachange Demo Test
 on:
-  workflow-dispatch:
+  workflow_dispatch:
 
 jobs:
   schemachange-setup:
