@@ -6,17 +6,14 @@ jobs:
   schemachange-setup:
     runs-on: ubuntu-latest
     steps:
-      uses: actions/checkout@v4
-      run: echo schemachange-setup
+      - run: echo schemachange-setup
 
   schemachange-demo001:
     runs-on: ubuntu-latest
     steps:
-      uses: actions/checkout@v4
-      run: echo schemachange-demo001
+      - run: echo schemachange-demo001
 
   schemachange-teardown:
     runs-on: ubuntu-latest
     steps:
-      uses: actions/checkout@v4
-      run: echo schemachange-teardown
+      - run: echo schemachange-teardown
