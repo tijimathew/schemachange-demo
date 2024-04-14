@@ -1,5 +1,9 @@
 name: Schemachange Demo Test
 on:
+  push:
+    branches:
+      - main
+      
   workflow_dispatch:
 
 jobs:
