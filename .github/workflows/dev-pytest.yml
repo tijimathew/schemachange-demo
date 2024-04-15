@@ -26,11 +26,7 @@ jobs:
           python -m pip install --upgrade pip
       - name: Install dependencies
         run: |
-          python -m pip install pytest
           python -m pip install schemachange==3.6.1
-      #- name: Test with pytest
-      #  run: |
-      #    pytest
       - name: Setup SnowCLI connection file
         run: |
           echo "[connections]" > config.toml
@@ -47,6 +43,8 @@ jobs:
           echo "::endgroup::"
           snow --config-file config.toml connection test -c myconnection
           echo "Tested SnowCLI connection successfully!"
+          echo "Set default connection"
+          snow --config-file config.toml connection set-default "myconnection"
       - name: Test Basic Schemachange
         run: |
           snow --config-file config.toml sql -f ./demo/setup/setup_basics_demo.sql
