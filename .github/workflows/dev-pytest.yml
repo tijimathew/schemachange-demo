@@ -26,6 +26,7 @@ jobs:
           python -m pip install --upgrade pip
       - name: Install dependencies
         run: |
+          python -m pip install pytest
           python -m pip install schemachange==3.6.1
       - name: Test with pytest
         run: |
